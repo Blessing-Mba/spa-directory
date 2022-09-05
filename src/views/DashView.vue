@@ -40,7 +40,7 @@
                  <div v-if ="showModal"><modal></modal><Test/></div>
             </div>
             <div class="address">
-                <div><h2>Josh Bakery Ventures</h2></div>
+                <div><h2>Mel's Spa</h2></div>
                 <div><h4>62, Bode Thomas, Surulere, Lagos</h4></div>
             </div>
             <div class="roles">
@@ -87,13 +87,13 @@
                     <th>PHONE</th>
                     <th>ROLE</th>
                     </thead>
-                    <tr>
+                    <tr v-for="(employee, index) in employees" :key="index">
                     <td><img src=""></td>
-                    <td  data-label="FIRST NAME">Uzor</td>
-                    <td  data-label="LAST NAME">Nduma</td>
-                    <td data-label="EMAIL">uzornduma@gmail.com</td>
-                    <td  data-label="PHONE">07084449357</td>
-                    <td  data-label="ROLE">Admin</td>
+                    <td  data-label="FIRST NAME">{employee.firstName}</td>
+                    <td  data-label="LAST NAME">{employee.lastName}</td>
+                    <td data-label="EMAIL">{employee.email}</td>
+                    <td  data-label="PHONE">{employee.contact}</td>
+                    <td  data-label="ROLE">{employee.role}</td>
                     </tr>
                 </table>
                 </div>
@@ -107,16 +107,37 @@
 <script>
 import Modal from '../components/ModalView.vue'
 import Test from '../components/test.vue'
+import {mapActions} from 'vuex'
+
 export default {
   data() {
     return {
        showModal: false,
     };
   },
+
+  async mounted() {
+    await this.fetchEmployees()
+
+    console.log(this.$store.state)
+    console.log(this.employees)
+  },
+
   components: {Modal, Test},
   methods: {
+
   openModal() {
    this.showModal = true
+  },
+
+  ...mapActions({
+    fetchEmployees: 'fetchEmployees',
+  }),
+
+  computed: {
+    employees () {
+      return this.$store.state.employees;
+    }
   }
 }
 }
@@ -430,7 +451,7 @@ h4{
         justify-content: space-between;
         width: 100%;
         height: 100px;
-        background-color: red;
+        
     }
     .dashboard-container{
         margin-top: 0 !important;
@@ -486,9 +507,9 @@ h4{
     content: attr(data-label);
     position: absolute;
     left: 0;
-    width: 50%;
+    width: 45%;
     padding-left: 10px;
-    font-size: 10px;
+    font-size: 8px;
     font-weight: bold;
     text-align: left;
   }
@@ -498,6 +519,7 @@ h4{
   .dashboard-body{
     margin: 0;
   }
+ 
 }
 
   
