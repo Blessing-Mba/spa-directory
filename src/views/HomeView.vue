@@ -106,7 +106,11 @@ export default {
   }
 }
 </script>
-
+<style>
+  body{
+  margin: 0 !important;
+}
+</style>
 <style scoped>
 
 .container{
@@ -336,7 +340,9 @@ label{
   and (max-device-width: 840px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait){
-   
+    body{
+  margin: 0 !important;
+}
     .container{
       position: relative;
       width: 100%;

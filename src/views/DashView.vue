@@ -89,11 +89,11 @@
                     </thead>
                     <tr v-for="(employee, index) in employees" :key="index">
                     <td><img src=""></td>
-                    <td  data-label="FIRST NAME">{employee.firstName}</td>
-                    <td  data-label="LAST NAME">{employee.lastName}</td>
-                    <td data-label="EMAIL">{employee.email}</td>
-                    <td  data-label="PHONE">{employee.contact}</td>
-                    <td  data-label="ROLE">{employee.role}</td>
+                    <td  data-label="FIRST NAME">{{employee.firstName}}</td>
+                    <td  data-label="LAST NAME">{{employee.lastName}}</td>
+                    <td data-label="EMAIL">{{employee.email}}</td>
+                    <td  data-label="PHONE">{{employee.contact}}</td>
+                    <td  data-label="ROLE">{{employee.role}}</td>
                     </tr>
                 </table>
                 </div>
@@ -133,20 +133,34 @@ export default {
   ...mapActions({
     fetchEmployees: 'fetchEmployees',
   }),
-
-  computed: {
+},
+computed: {
     employees () {
       return this.$store.state.employees;
     }
   }
 }
-}
 
 
 </script>
+<style>@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 840px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait){
+    .dashboard-container{
+  margin-top: 0 !important;
+  width: 100%; 
+  padding-left: 0.7rem;
+}
+
+    };
+  
+</style>
 <style scoped>
 .mobile-nav{
     display: none;
+    
 }
   .dashboard-body{
     margin: 0;
@@ -450,12 +464,10 @@ h4{
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        height: 100px;
+        height: 20px;
         
     }
-    .dashboard-container{
-        margin-top: 0 !important;
-    }
+    
     .navbar, .first-box{
         display: none;
     }
@@ -469,9 +481,13 @@ h4{
     }
      .employee-text{
         text-align: center;
+        width: 100%;
+        font-size: 32px;
     }
+    
     h2{
         font-size: 24px;
+        
     }
     h4{
         font-size: 16px;

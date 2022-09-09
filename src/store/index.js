@@ -44,6 +44,7 @@ export default createStore({
             headers: {
               'Content-Type': 'application/json',
             },
+            body: payload
           },
         )
         commit('ADD_EMPLOYEE', response)
