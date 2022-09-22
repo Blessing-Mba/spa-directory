@@ -346,6 +346,7 @@ label{
     .container{
       position: relative;
       width: 100%;
+      height: 120vh;
      
       background: #F6F8F8;
     }
@@ -358,6 +359,7 @@ label{
       padding-right: 2rem;
       
     }
+   
     .right-container{
       padding: 0;
       width: 100%;
@@ -365,7 +367,7 @@ label{
     }
     .right-box{
        width: 100% !important;
-      height: 422px !important;
+      height: 600px !important;
       text-align: left;
       background: #FFFFFF;
       margin-top: 11rem !important;

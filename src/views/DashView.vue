@@ -199,7 +199,7 @@ computed: {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background-color: #6A7E8A;
+    background-color: #E5E5E5;
 }
 .text, .img{
     padding-top: 0.5rem;
@@ -240,7 +240,7 @@ computed: {
 }
 .employee-text{
     font-weight: 500;
-    font-size: 26px;
+    font-size: 32px;
     line-height: 15px;
     display: flex;
     letter-spacing: -0.65px;
@@ -253,7 +253,7 @@ computed: {
     height: 44px;
     width: 200px;
     border-radius: 3px;
-    margin-top: 1.8rem;
+    margin-top: 1.5rem;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -329,7 +329,7 @@ h4{
     box-sizing: border-box;
     width: 332px;
     height: 34px;
-    margin-top: -1rem;
+    margin-top: 0.3rem;
     background: #FFFFFF;
     border: 1px solid rgba(106, 126, 138, 0.4);
     border-radius: 3px;
@@ -464,12 +464,21 @@ h4{
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        height: 20px;
-        
+        height: 30px;
+        padding-top: 1rem;
     }
     
     .navbar, .first-box{
         display: none;
+    }
+   
+    .dashboard-container{
+      width: 100%;
+      padding-left: 0.7rem;
+
+    }
+    .second-box{
+      margin-top: 3rem !important;
     }
     .mobile-sign-up{
         display: flex;
@@ -498,7 +507,7 @@ h4{
    }
     .employee-btn{
         margin-top: 3rem !important;
-        width: 7rem;
+      
     }
     .table thead{
         display: none;
@@ -515,7 +524,7 @@ h4{
     margin-bottom: 15px;
   }
   .table td {
-    padding-left: 50%;
+    padding-left: 35%;
     text-align: left;
     position: relative;
   }

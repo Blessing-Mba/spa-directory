@@ -8,26 +8,26 @@
           <div class="dash-control">
             <label for="name">First name</label>
             <br>
-            <input type="name" id="fname" />
+            <input type="text" v-model="firstName" id="fname" />
           </div>
           <div class="dash-control">
             <label for="name">Last name</label>
             <br>
-            <input type="name" id="lname" />
+            <input type="text" v-model="firstName" id="lname" />
           </div>
           <div class="dash-control">
             <label for="email">Email</label>
             <br>
-            <input type="email" id="email" />
+            <input type="email" v-model="email" id="email" />
           </div>
           <div class="dash-control">
             <label for="phone number">Phone number</label>
-            <input type="number" id="number" />
+            <input type="number" v-model="contact" id="number" />
           </div>
           <div class="dash-control">
             <label for="role">Role</label>
             <br>
-            <input type="name" id="role" />
+            <input type="name" v-model="role" id="role" />
           </div>
           <button class="modal-btn">Update</button>
         </form>
