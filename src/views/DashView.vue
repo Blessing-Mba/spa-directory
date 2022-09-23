@@ -230,6 +230,7 @@ computed: {
     width: 95%;
     background-color: #E5E5E5;
     margin-top: 5rem !important;
+    height: 180vh;
 }
 .employee-head{
     display: flex;
@@ -471,14 +472,18 @@ h4{
     .navbar, .first-box{
         display: none;
     }
-   
+   .dashboard-body{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+   }
     .dashboard-container{
       width: 100%;
-      padding-left: 0.7rem;
+     padding: 0;
 
     }
     .second-box{
       margin-top: 3rem !important;
+      width: 100%;
     }
     .mobile-sign-up{
         display: flex;
@@ -488,26 +493,38 @@ h4{
         margin: 0 auto !important;
         text-align: center;
     }
+    .address{
+      padding-top: 0.5rem;
+      justify-content: center;
+      text-align: center;
+    }
      .employee-text{
         text-align: center;
         width: 100%;
         font-size: 32px;
+        letter-spacing: 0.005rem;
     }
     
     h2{
-        font-size: 24px;
-        
+        font-size: 32px;
+        padding-left: 0;
+        margin-left: 1rem;
     }
     h4{
         font-size: 16px;
         text-align: center;
+        margin-left: 1rem;
     }
    .role-control{
     display: block;
    }
+   .roles{
+    padding: 0.6rem;
+    padding-top: 2rem;
+   }
     .employee-btn{
-        margin-top: 3rem !important;
-      
+        margin-top: 1rem !important;
+        width: 7rem;
     }
     .table thead{
         display: none;

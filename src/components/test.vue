@@ -74,4 +74,16 @@ export default {
  .modal-btn{
     margin-top: 1rem;
  }
+ @media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 840px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait){
+    .modal{
+      margin-left: 2rem;
+    }
+    .modal-box{
+      margin-left: 0 !important;
+    }
+  }
 </style>
